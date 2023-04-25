@@ -1,14 +1,15 @@
 #include "main.h"
 /**
- * _HEX_aux- a fun
- * @number: op
+ * _HEX- a fun
+ * @x: op
  * Return: length
  */
-int _HEX_aux(unsigned int number)
+int _HEX(va_list x)
 {
 int i;
 int *arr;
 int length = 0;
+unsigned int number = va_arg(x, unsigned int);
 unsigned int j = number;
 while (number / 16 != 0)
 {
