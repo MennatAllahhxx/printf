@@ -20,7 +20,7 @@ _putchar(str[i]);
 }
 return (i);
 }
-k = (unsigned long int)pointer;
+k = (unsigned long int)ptr;
 _putchar('0');
 _putchar('x');
 j = _hex_aux(k);
