@@ -7,7 +7,7 @@
 int _pointer(va_list x)
 {
 char *str = "(nil)";
-void *ptr;	
+void *ptr;
 unsigned long int k;
 int j;
 int i;
