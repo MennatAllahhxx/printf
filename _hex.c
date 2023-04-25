@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _hex - a fun
- * @nx: op
+ * @x: op
  * Return: length
  */
 int _hex(va_list x)
