@@ -30,7 +30,7 @@ while (j >= 0)
 {
 if (k[j].id[0] == format[i] && k[j].id[1] == format[i + 1])
 {
-length += k[j].f(args);
+length += k[j].f(x);
 i += 2;
 goto Here;
 }
