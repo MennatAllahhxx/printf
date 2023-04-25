@@ -4,7 +4,7 @@
  * @str: op
  * Return: length
  */
-int strlen(char *str)
+int _strlen(char *str)
 {
 int length = 0;
 while (str[length] != '\0')
@@ -19,7 +19,7 @@ return (length);
  * @str: op
  * Return: length
  */
-int strlenc(const char *str)
+int _strlenc(const char *str)
 {
 int length = 0;
 while (str[length] != '\0')
