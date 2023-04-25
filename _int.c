@@ -23,7 +23,7 @@ if (n > 0)
 {
 while (n / 10 != 0)
 {
-j *= 10;
+j = j * 10;
 n /= 10;
 }
 n = number;
@@ -31,7 +31,7 @@ while (j > 0)
 {
 digit = n / j;
 _putchar(digit + '0');
-n -= (j * digit);
+n = n - (digit * 1 * j);
 j /= 10;
 i++;
 }
@@ -47,6 +47,6 @@ return (i);
  */
 int _decimal(va_list x)
 {
-int number = va_args(x, int);	
+int number = va_args(x, int);
 return (_integer(number));
 }
