@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _rev - a fun
- * @str: op
+ * @x: op
  * Return: length
  */
 int _rev(va_list x)
