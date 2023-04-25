@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * strlen - a fun
+ * _strlen - a fun
  * @str: op
  * Return: length
  */
@@ -15,7 +15,7 @@ return (length);
 }
 
 /**
- * strlenc - a fun
+ * _strlenc - a fun
  * @str: op
  * Return: length
  */
