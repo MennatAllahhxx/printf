@@ -12,9 +12,9 @@ int j;
 str = va_arg(x, char *);
 if (str == NULL)
 {
-string = "(null)";
+str = "(null)";
 }
-for (i = 0; string[i] != '\0'; i++)
+for (i = 0; str[i] != '\0'; i++)
 {
 if (str[i] < 32 || str[i] >= 127)
 {
