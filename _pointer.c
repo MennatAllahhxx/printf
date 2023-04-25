@@ -24,5 +24,5 @@ k = (unsigned long int)ptr;
 _putchar('0');
 _putchar('x');
 j = _hex_aux(k);
-return (k + 2);
+return (j + 2);
 }
