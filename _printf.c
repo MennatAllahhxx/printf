@@ -1,44 +1,45 @@
-#include <stdarg.h>
 #include "main.h"
 /**
- * _printf - fun
+ * _printf - a fun
  * @format: op
- * Return: output
+ * Return: length
  */
-int _printf(const char *format, ...)
+int _printf(const char * const format, ...)
 {
-int i = 0, count = 0;
-va_list args;
-va_start(args, format);
-while (format && format[i])
+convert_match k[] = {
+	{"%s", _string}, {"%c", _char},
+	{"%%", _percent}, {"%i", _int},
+	{"%d", _dec}, {"%r", _rev},
+	{"%R", _rot13}, {"%b", _bin},
+	{"%u", _unsigned}, {"%o", _oct},
+	{"%x", _hex}, {"%X", _HEX},
+	{"%S", _ex_string}, {"%p", _pointer}
+};
+va_list x;
+int i = 0, j, length = 0;
+va_start(x, format);
+if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 {
-if (format[i] == '%')
+return (-1);
+}
+Here:
+while (format[i] != '\0')
 {
-i++;
-switch (format[i])
+j = 13;
+while (j >= 0)
 {
-case 'c':
-_putchar(va_arg(args, int));
-break;
-case 's':
-count += write(1, va_arg(args, char *), -1);
-break;
-case '%':
-_putchar('%');
-break;
-default:
-_putchar('%');
+if (k[j].id[0] == format[i] && k[j].id[1] == format[i + 1])
+{
+length += k[j].f(args);
+i += 2;
+goto Here;
+}
+j--;
+}
 _putchar(format[i]);
-break;
-}
-}
-else
-{
-_putchar(format[i]);
-count++;
-}
+length++;
 i++;
 }
-va_end(args);
-return (count);
+va_end(x);
+return (length);
 }
