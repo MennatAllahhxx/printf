@@ -8,9 +8,9 @@ int _printf(const char * const format, ...)
 {
 convert_match k[] = {
 	{"%s", _string}, {"%c", _char},
-	{"%%", _percent}, {"%i", _int},
-	{"%d", _dec}, {"%r", _rev},
-	{"%R", _rot13}, {"%b", _bin},
+	{"%%", _percent}, {"%i", _integer},
+	{"%d", _decimal}, {"%r", _rev},
+	{"%R", _rot13}, {"%b", _binary},
 	{"%u", _unsigned}, {"%o", _oct},
 	{"%x", _hex}, {"%X", _HEX},
 	{"%S", _ex_string}, {"%p", _pointer}
